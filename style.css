@@ -34,6 +34,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 #slider {
@@ -44,6 +45,9 @@ body {
   width: 18rem;
   transform: rotate(-90deg) translateX(-45vh) scale(2);
   display: block;
+  border: 10vw solid transparent;
+  border-left: 0;
+  border-right: 0;
 }
 
 /***** Chrome, Safari, Opera, and Edge Chromium *****/
