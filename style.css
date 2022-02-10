@@ -19,6 +19,7 @@
 body {
   font-family: "Atkinson Hyperlegible", sans-serif;
   background-color: hsl(224, 34%, 80%);
+  overscroll-behavior-y: none;
 }
 
 input,
@@ -56,7 +57,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 /******** Firefox ********/
 input[type="range"]::-moz-range-track {
   background: hsl(224, 84%, 10%);
-  height: 6px;
+  height: 9px;
   border-radius: 2px;
 }
 
