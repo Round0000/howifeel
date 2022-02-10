@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Dancing+Script:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Evaluate how are you <span>feeling today</span></h1>
+    <form id="ui_form">
+      <div id="ui_form_evaluations">
+        <input type="radio" name="evaluation" id="value_0" value="0" /><label
+          for="value_0"
+          >0</label
+        >
+        <input type="radio" name="evaluation" id="value_1" value="1" /><label
+          for="value_1"
+          >1</label
+        >
+        <input type="radio" name="evaluation" id="value_2" value="2" /><label
+          for="value_2"
+          >2</label
+        >
+        <input type="radio" name="evaluation" id="value_3" value="3" /><label
+          for="value_3"
+          >3</label
+        >
+        <input type="radio" name="evaluation" id="value_4" value="4" /><label
+          for="value_4"
+          >4</label
+        >
+        <input type="radio" name="evaluation" id="value_5" value="5" /><label
+          for="value_5"
+          >5</label
+        >
+        <input type="radio" name="evaluation" id="value_6" value="6" /><label
+          for="value_6"
+          >6</label
+        >
+      </div>
+
+      <label id="ui_comment_input">
+        <textarea
+          name="comment"
+          placeholder="You can enter a comment here"
+        ></textarea>
+      </label>
+
+      <button id="ui_submit_btn" type="submit">Submit</button>
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>

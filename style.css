@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  background-color: #f7fee7;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/*****************/
+h1 {
+  /* line-height: 1; */
+  text-align: center;
+  font-size: 2rem;
+  margin: 1em auto 0;
+  padding: 0 1em;
+  font-family: "Dancing Script", cursive;
+  background-image: linear-gradient(-15deg, #0369a1, #0ea5e9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #fff5;
+}
+
+h1 span {
+  display: block;
+  width: max-content;
+  margin: -.2em auto 0;
+  font-size: 2.25rem;
+  padding: 0 .4em .2em;
+}
+
+#ui_form {
+  width: 20em;
+  margin: 1em auto 2em;
+  padding: 1.5em 1em 2em;
+  border-radius: 6px;
+  box-shadow: inset 1px 1px 4px #1e3a8a66;
+  background-color: #fff;
+}
+
+#ui_form_evaluations {
+  display: flex;
+  align-items: flex-end;
+  height: 64px;
+}
+
+#ui_form_evaluations label {
+  height: 32px;
+  transition: all 0.2s;
+  border: 2px solid #0005;
+  flex: 3;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 2px #0005;
+}
+
+#ui_form_evaluations input {
+  width: 0;
+  height: 0;
+}
+
+#ui_form_evaluations input:checked + label {
+  /* border-color: transparent; */
+  height: 48px;
+  flex: 4;
+}
+
+#ui_form_evaluations label:nth-of-type(1) {
+  background-color: #9d0208;
+  color: white;
+}
+#ui_form_evaluations label:nth-of-type(2) {
+  background-color: #f04242;
+}
+#ui_form_evaluations label:nth-of-type(3) {
+  background-color: #fb8500;
+}
+#ui_form_evaluations label:nth-of-type(4) {
+  background-color: #ccff33;
+}
+#ui_form_evaluations label:nth-of-type(5) {
+  background-color: #67bf67;
+}
+#ui_form_evaluations label:nth-of-type(6) {
+  background-color: #36a35f;
+}
+#ui_form_evaluations label:nth-of-type(7) {
+  background-color: #048757;
+  color: white;
+}
+
+#ui_comment_input textarea {
+  display: block;
+  width: max-content;
+  margin: 1em auto;
+  font-size: 0.9rem;
+  padding: 0.25em 0.5em;
+  width: 25em;
+  max-width: 100%;
+  height: 5em;
+  border: 1px solid #0ea5e9;
+  border-radius: 4px;
+  resize: vertical;
+  color: #222;
+}
+
+#ui_comment_input textarea:focus {
+  outline: 2px solid #0ea5e966;
+  outline-offset: 2px;
+}
+
+#ui_submit_btn {
+  all: unset;
+  display: block;
+  margin: auto;
+  background: linear-gradient(-20deg, #ddd6fe, #7dd3fc);
+  padding: 0.5em 1.5em;
+  border-radius: 6px;
+  box-shadow: 1px 2px 1px #0c4a6e88;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.1s;
+  outline: 1px solid transparent;
+  outline-offset: 1px;
+  color: #000d;
+  text-shadow: 1px 1px 2px #fff5;
+}
+
+#ui_submit_btn:hover,
+#ui_submit_btn:focus {
+  box-shadow: none;
+  transform: translateY(2px);
+  outline-color: #0ea5e9;
+  color: #000;
+}
