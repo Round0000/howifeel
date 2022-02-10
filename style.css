@@ -47,29 +47,29 @@ body {
 
 /***** Chrome, Safari, Opera, and Edge Chromium *****/
 input[type="range"]::-webkit-slider-runnable-track {
-  background: linear-gradient(transparent 30%, hsl(224, 84%, 10%) 0 70%, transparent 0);
-  height: 17px;
+  background: hsl(224, 84%, 10%);
+  height: 9px;
   border-radius: 2px;
+  padding: 0 3%;
 }
 
 /******** Firefox ********/
 input[type="range"]::-moz-range-track {
-  background: #111827;
+  background: hsl(224, 84%, 10%);
   height: 6px;
   border-radius: 2px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    margin-top: -2px; /* Centers thumb on the track */
-    background-color: hsl(224, 64%, 80%);
-    border: 2px solid #fff;
-    border-radius: 3px;
-    height: 20px;
-    width: 20px;    
-    border-radius: 100%;
- }
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -6px; /* Centers thumb on the track */
+  background-color: hsl(224, 64%, 80%);
+  border: 2px solid #fff;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+}
 
 /* ****** */
 /* ****** */
