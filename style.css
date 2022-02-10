@@ -18,7 +18,7 @@
 
 body {
   font-family: "Atkinson Hyperlegible", sans-serif;
-  background-color: #ebf2fa;
+  background-color: hsl(224, 34%, 80%);
 }
 
 input,
@@ -29,8 +29,72 @@ textarea {
 }
 
 /*****************/
-h1 {
-  /* line-height: 1; */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 18rem;
+  transform: rotate(-90deg) translateX(-45vh) scale(2);
+  display: block;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(transparent 30%, hsl(224, 84%, 10%) 0 70%, transparent 0);
+  height: 17px;
+  border-radius: 2px;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  background: #111827;
+  height: 6px;
+  border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -2px; /* Centers thumb on the track */
+    background-color: hsl(224, 64%, 80%);
+    border: 2px solid #fff;
+    border-radius: 3px;
+    height: 20px;
+    width: 20px;    
+    border-radius: 100%;
+ }
+
+/* ****** */
+/* ****** */
+/* ****** */
+
+/* #slider_bar {
+    width: 3px;
+    height: 80vh;
+    background-color: #0005;
+    margin: 5vh auto;
+    position: relative;
+}
+
+#slider {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border: 2px solid #0005;
+    border-radius: 100%;
+    left: -15px;
+} */
+
+/**********/
+/* h1 {
   text-align: center;
   font-size: 2rem;
   margin: 1em auto 0;
@@ -89,7 +153,6 @@ h1 span {
 }
 
 #ui_form_evaluations input:checked + label {
-  /* border-color: transparent; */
   height: 54px;
   flex: 4;
 }
@@ -163,7 +226,6 @@ h1 span {
   color: #000;
 }
 
-/* Stats display */
 #ui_stats {
   border: 1px solid #0f486355;
   background-color: white;
@@ -221,4 +283,4 @@ h1 span {
 #ui_stats li[data-evaluation="6"] {
   background-color: var(--clr-6);
   height: 7.5em;
-}
+} */
