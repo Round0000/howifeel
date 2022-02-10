@@ -29,7 +29,7 @@ h1 {
   background-image: linear-gradient(-15deg, #0369a1, #0ea5e9);
   -webkit-background-clip: text;
   background-clip: text;
-  color: #fff5;
+  color: #1e40af00;
 }
 
 h1 span {
@@ -41,7 +41,8 @@ h1 span {
 }
 
 #ui_form {
-  width: 20em;
+  width: 380px;
+  max-width: 95vw;
   margin: 1em auto 2em;
   padding: .5em 1em 2em;
   border-radius: 6px;
@@ -56,9 +57,9 @@ h1 span {
 }
 
 #ui_form_evaluations label {
-  height: 32px;
+  height: 40px;
   transition: all 0.2s;
-  border: 2px solid #0005;
+  border: 2px solid #1e40af55;
   flex: 3;
   border-left: none;
   border-right: none;
@@ -75,7 +76,7 @@ h1 span {
 
 #ui_form_evaluations input:checked + label {
   /* border-color: transparent; */
-  height: 48px;
+  height: 54px;
   flex: 4;
 }
 

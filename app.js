@@ -1,5 +1,14 @@
 ui_form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  console.log(e.target.evaluation.value, e.target.comment.value);
+  if (e.target.evaluation.value.length === 0) return;
+
+  const obj = {};
+
+  [obj.evaluation, obj.comment] = [
+    e.target.evaluation.value,
+    e.target.comment.value,
+  ];
+
+  console.table(obj);
 });
