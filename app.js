@@ -11,4 +11,12 @@ ui_form.addEventListener("submit", (e) => {
   ];
 
   console.table(obj);
+  updateUIstats(obj);
 });
+
+function updateUIstats(obj) {
+  const list = ui_stats.querySelector("ul");
+  const item = document.createElement("LI");
+  item.innerText = `10/02 - ${obj.evaluation}`;
+  list.append(item);
+}
