@@ -2,6 +2,8 @@ if (window.innerWidth < 800) {
   document.querySelector("body").style.height = window.innerHeight + "px";
 }
 
+let devMode = false;
+
 ui_form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -30,8 +32,12 @@ function storeValue(val, date) {
   data.push({ value: val, date: date });
 
   localStorage.setItem("data", JSON.stringify(data));
-  sendDataToJsonBin(JSON.stringify(data));
-  console.log(data);
+
+  if (devMode) {
+    console.log(data);
+  } else {
+    sendDataToJsonBin(JSON.stringify(data));
+  }
 }
 
 function displayChart(tableBody) {
@@ -76,14 +82,17 @@ reset_app.addEventListener("click", (e) => {
 function sendDataToJsonBin(data) {
   let req = new XMLHttpRequest();
 
-req.onreadystatechange = () => {
-  if (req.readyState == XMLHttpRequest.DONE) {
-    console.log(req.responseText);
-  }
-};
+  req.onreadystatechange = () => {
+    if (req.readyState == XMLHttpRequest.DONE) {
+      console.log(req.responseText);
+    }
+  };
 
-req.open("PUT", "https://api.jsonbin.io/v3/b/620678ca4bf50f4b2df7b279", true);
-req.setRequestHeader("Content-Type", "application/json");
-req.setRequestHeader("X-Master-Key", "$2b$10$WAFNRNZjY0lcb5sEmtl5bunm4T4rmeCXxwAf5rwoMLvQFxwVjdKoi");
-req.send(data);
+  req.open("PUT", "https://api.jsonbin.io/v3/b/620678ca4bf50f4b2df7b279", true);
+  req.setRequestHeader("Content-Type", "application/json");
+  req.setRequestHeader(
+    "X-Master-Key",
+    "$2b$10$WAFNRNZjY0lcb5sEmtl5bunm4T4rmeCXxwAf5rwoMLvQFxwVjdKoi"
+  );
+  req.send(data);
 }
