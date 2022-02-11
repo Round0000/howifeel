@@ -10,7 +10,7 @@ body {
   font-family: "Atkinson Hyperlegible", sans-serif;
   background-color: hsl(224, 34%, 80%);
   overscroll-behavior-y: none;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 body,
