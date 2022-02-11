@@ -1,3 +1,5 @@
+document.querySelector("body").style.height = window.innerHeight + "px";
+
 ui_form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -157,3 +159,5 @@ function displayChart(table) {
     table.append(tr);
   });
 }
+
+
