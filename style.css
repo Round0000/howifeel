@@ -10,6 +10,7 @@ body {
   font-family: "Atkinson Hyperlegible", sans-serif;
   background-color: hsl(224, 34%, 80%);
   overscroll-behavior-y: none;
+  overflow: hidden;
 }
 
 body,
@@ -24,7 +25,18 @@ textarea {
   font-size: inherit;
 }
 
+.move {
+  transform: translateY(-100vh) !important;
+}
+.movehigher {
+  transform: translateY(-150vh) !important;
+}
+
 /*****************/
+#container {
+  transition: all .8s;
+}
+
 
 #ui_form {
   display: flex;
@@ -32,9 +44,8 @@ textarea {
   justify-content: center;
   align-items: center;
   grid-template-rows: 1fr auto;
-  height: 90vh;
+  height: calc(85vh + 8vw);
   padding-bottom: 3vh;
-  display: none;
 }
 
 #slider {
@@ -45,6 +56,16 @@ textarea {
   width: 70vh;
   transform: rotate(-90deg) translateX(-40vh);
   display: block;
+  position: relative;
+}
+
+#slider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 1000%;
+  top: -450%;
+  z-index: -1;
 }
 
 #slider::-webkit-slider-runnable-track {
@@ -71,7 +92,8 @@ textarea {
   border-radius: 100%;
 }
 
-#ui_form button[type="submit"] {
+#ui_form button[type="submit"],
+#ui_show_charts {
   all: unset;
   cursor: pointer;
   width: 60px;
@@ -86,11 +108,18 @@ textarea {
   user-select: none;
 }
 
-#ui_form button[type="submit"] svg {
+#ui_form button[type="submit"] svg,
+#ui_show_charts svg {
   width: 100%;
   height: 100%;
   opacity: 0.6;
   user-select: none;
+}
+
+#ui_show_charts {
+  margin: 40vh auto 40vh;
+  border: 1px solid white;
+  padding: 1em;
 }
 
 /* ******* */
@@ -124,18 +153,23 @@ textarea {
 #chart2 .data {
   width: max-content;
   font-size: 1rem;
-  position: fixed;
+  position: absolute;
   opacity: 0;
   top: 6vw;
   left: 0;
   right: 0;
   width: 100%;
   color: hsl(224, 20%, 10%);
+  top: 0;
 }
 
 #chart tr:hover .data,
 #chart2 tr:hover .data {
   opacity: 1;
   margin: auto;
-  z-index: 10;
+}
+
+#charts {
+  padding-top: 10vh;
+  height: 100vh;
 }

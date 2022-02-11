@@ -25,6 +25,15 @@ ui_form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   storeValue(e.target.evaluation.value, Date.now());
+
+  displayChart(tableBody1);
+  displayChart(tableBody2);
+
+  container.classList.add("move");
+});
+
+ui_show_charts.addEventListener("click", (e) => {
+  container.classList.add("movehigher");
 });
 
 function storeValue(val, date) {
@@ -173,6 +182,3 @@ function displayChart(table) {
     table.append(tr);
   });
 }
-
-displayChart(tableBody1);
-displayChart(tableBody2);
