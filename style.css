@@ -133,6 +133,7 @@ button svg {
 
 #middle_area {
   display: flex;
+flex-direction: column;
   justify-content: center;
   align-items: center;
 }
