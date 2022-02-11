@@ -37,9 +37,9 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  grid-template-rows: 1fr auto;
-  height: calc(85vh + 8vw);
-  padding-bottom: 3vh;
+  height: 100vh;
+  transform: translateY(100vh);
+  /* padding-bottom: 3vh; */
   transition: all .8s;
 }
 
