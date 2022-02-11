@@ -10,7 +10,6 @@ body {
   font-family: "Atkinson Hyperlegible", sans-serif;
   background-color: hsl(224, 34%, 80%);
   overscroll-behavior-y: none;
-  overflow: hidden;
 }
 
 body,
@@ -101,7 +100,7 @@ textarea {
 }
 
 #chart tbody {
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 #chart.area {
@@ -118,15 +117,18 @@ textarea {
 
 #chart .data {
     width: max-content;
-    font-size: .8rem;
-    position: absolute;
+    font-size: 1rem;
+    position: fixed;
     opacity: 0;
-    transition: all .3s;
+    top: 6vw;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: hsl(224, 20%, 10%);
 }
 
 #chart tr:hover .data {
     opacity: 1;
     margin: auto;
     z-index: 10;
-    inset: 0;
 }

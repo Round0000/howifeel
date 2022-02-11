@@ -112,11 +112,11 @@ const data = [
   },
   {
     date: "19.02.2022",
-    value: 82,
+    value: 72,
   },
   {
     date: "20.02.2022",
-    value: 90,
+    value: 70,
   },
   {
     date: "21.02.2022",
@@ -140,7 +140,7 @@ const data = [
   },
   {
     date: "25.02.2022",
-    value: 88,
+    value: 100,
   },
   {
     date: "26.02.2022",
@@ -158,15 +158,19 @@ const data = [
 
 const tableBody = chart.querySelector("tbody");
 
-let prevPoint = data[0].value / 100;
+function displayChart() {
+  let prevPoint = data[0].value / 100;
 
-data.forEach((item) => {
-  const tr = document.createElement("TR");
-  tr.innerHTML = `
+  data.forEach((item) => {
+    const tr = document.createElement("TR");
+    tr.innerHTML = `
   <td style="--start: ${prevPoint}; --size: ${
-    item.value / 100
-  }"> <span class="data"> ${item.date} </span> </td>
+      item.value / 100
+    }"> <span class="data"> ${item.date} </span> </td>
     `;
-  prevPoint = item.value / 100;
-  tableBody.append(tr);
-});
+    prevPoint = item.value / 100;
+    tableBody.append(tr);
+  });
+}
+
+displayChart();
