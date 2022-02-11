@@ -73,25 +73,28 @@ charts_style_options.addEventListener("click", (e) => {
   }
 });
 
-document.body.innerHTML = navigator.platform;
-
 function iOS() {
-  return [
-    'iPad Simulator',
-    'iPhone Simulator',
-    'iPod Simulator',
-    'iPad',
-    'iPhone',
-    'iPod'
-  ].includes(navigator.platform)
-  // iPad on iOS 13 detection
-  || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+  return (
+    [
+      "iPad Simulator",
+      "iPhone Simulator",
+      "iPod Simulator",
+      "iPad",
+      "iPhone",
+      "iPod",
+    ].includes(navigator.platform) ||
+    // iPad on iOS 13 detection
+    (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+  );
 }
 
 reset_app.addEventListener("click", (e) => {
   slider.value = 50;
   container.classList.remove("move", "movehigher");
-  window.close();
+
+  if (!iOS) {
+    window.close();
+  }
 });
 
 // JSON BIN
