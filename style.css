@@ -27,6 +27,7 @@ textarea {
 
 .move {
   transform: translateY(-100vh) !important;
+  opacity: 1 !important;
 }
 
 /*****************/
@@ -37,9 +38,8 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  transform: translateY(100vh);
-  /* padding-bottom: 3vh; */
+  height: 95vh;
+  padding-bottom: 10vh;
   transition: all .8s;
 }
 
@@ -112,12 +112,18 @@ textarea {
 }
 
 #ui_show_charts {
-  margin: 40vh auto 40vh;
+  margin: 20vh auto 1vh;
   border: 1px solid white;
   padding: 1em;
 }
 
 /* ******* */
+#charts {
+  padding-top: 10vh;
+  height: 100vh;
+  transition: all .8s;
+  opacity: 0;
+}
 
 #chart,
 #chart2 {
@@ -164,8 +170,3 @@ textarea {
   margin: auto;
 }
 
-#charts {
-  padding-top: 10vh;
-  height: 100vh;
-  transition: all .8s;
-}
