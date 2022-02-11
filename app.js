@@ -3,8 +3,9 @@ ui_form.addEventListener("submit", (e) => {
 
   storeValue(e.target.evaluation.value, Date.now());
 
-  displayChart(tableBody1);
-  displayChart(tableBody2);
+  document.querySelectorAll("tbody").forEach((table) => {
+    displayChart(table);
+  });
 
   ui_form.classList.add("move");
   ui_show_charts.classList.add("move");
@@ -143,9 +144,6 @@ const data = [
     value: 50,
   },
 ];
-
-const tableBody1 = chart.querySelector("tbody");
-const tableBody2 = chart2.querySelector("tbody");
 
 function displayChart(table) {
   let prevPoint = data[0].value / 100;
