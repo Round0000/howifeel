@@ -140,26 +140,19 @@ textarea {
 /* ******* */
 #charts {
   padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-#chart,
-#chart2 {
-  width: 100vw;
+#charts > * {
   overflow-x: auto;
-}
-
-#chart tbody,
-#chart2 tbody {
-  min-width: 800px;
-}
-
-#chart,
-#chart2 {
-  height: 30vw;
+  height: 30vh;
   width: 90vw;
-  margin: 5vw auto;
   border: 1px solid white;
-  background-color: #fff2;
+  background-color: #fff6;
+  margin: 2vh;
 }
 
 tbody td::before {
@@ -169,16 +162,14 @@ tbody td::before {
 tbody .data {
   width: max-content;
   font-size: 1rem;
-  position: absolute;
-  opacity: 0;
-  top: 6vw;
-  width: 100%;
+  position: sticky;
   color: hsl(224, 20%, 10%);
   top: 1em;
   left: 1em;
+  opacity: 0;
+  transition: all .2s;
 }
 
 tbody tr:hover .data {
   opacity: 1;
-  margin: auto;
 }
