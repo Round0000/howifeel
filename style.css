@@ -10,7 +10,7 @@ body {
   font-family: "Atkinson Hyperlegible", sans-serif;
   background-color: hsl(224, 34%, 80%);
   overscroll-behavior-y: none;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 body,
@@ -31,20 +31,25 @@ textarea {
 }
 
 .movehigher {
-  transform: translateY(-130vh) !important;
+  transform: translateY(-200vh) !important;
 }
 
 /*****************/
+#container {
+  transition: all 0.7s;
+}
 
+#container > * {
+  height: 100vh;
+  outline: 2px solid orangered;
+  outline-offset: -5px;
+}
 
 #ui_form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 95vh;
-  padding-bottom: 10vh;
-  transition: all .8s;
 }
 
 #slider {
@@ -115,18 +120,21 @@ textarea {
   user-select: none;
 }
 
+#middle_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #ui_show_charts {
-  margin: 20vh auto 1vh;
+  margin: auto;
   border: 1px solid white;
   padding: 1em;
 }
 
 /* ******* */
 #charts {
-  padding-top: 10vh;
-  height: 100vh;
-  transition: all .8s;
-  transform: translateY(100vh);
+  padding-top: 5vh;
 }
 
 #chart,
@@ -169,4 +177,3 @@ tbody tr:hover .data {
   opacity: 1;
   margin: auto;
 }
-
