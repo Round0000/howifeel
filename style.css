@@ -149,27 +149,23 @@ textarea {
   background-color: #fff2;
 }
 
-#chart td::before,
-#chart2 td::before {
+tbody td::before {
   background-color: hsl(224, 20%, 50%);
 }
 
-#chart .data,
-#chart2 .data {
+tbody .data {
   width: max-content;
   font-size: 1rem;
   position: absolute;
   opacity: 0;
   top: 6vw;
-  left: 0;
-  right: 0;
   width: 100%;
   color: hsl(224, 20%, 10%);
-  top: 0;
+  top: 1em;
+  left: 1em;
 }
 
-#chart tr:hover .data,
-#chart2 tr:hover .data {
+tbody tr:hover .data {
   opacity: 1;
   margin: auto;
 }
