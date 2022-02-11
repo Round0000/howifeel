@@ -77,9 +77,6 @@ reset_app.addEventListener("click", (e) => {
   slider.value = 50;
   container.classList.remove("move", "movehigher");
 
-  if (navigator.platform !== "iPhone" || navigator.platform !== "iPad") {
-    window.close();
-  }
 });
 
 // JSON BIN
