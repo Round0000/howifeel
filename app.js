@@ -16,6 +16,8 @@ ui_show_charts.addEventListener("click", (e) => {
   container.classList.add("movehigher");
 });
 
+const data = JSON.parse(localStorage.getItem("data")) || [];
+
 function storeValue(val, date) {
   date = new Date(date);
   let month =
@@ -24,12 +26,18 @@ function storeValue(val, date) {
       : date.getMonth() + 1;
   date = date.getDate() + "." + month + "." + date.getFullYear();
   data.push({ value: val, date: date });
+
+  localStorage.setItem("data", JSON.stringify(data));
+  console.log(data);
 }
 
-const data = [];
+function displayChart(tableBody) {
+  console.log(tableBody);
+  tableBody.innerHTML = "";
 
-function displayChart(table) {
   let prevPoint = data[0].value / 100;
+
+  tableBody.style.width = data.length * 10 + "vh";
 
   data.forEach((item) => {
     const tr = document.createElement("TR");
@@ -39,7 +47,7 @@ function displayChart(table) {
     }"> <span class="data"> ${item.date} </span> </td>
     `;
     prevPoint = item.value / 100;
-    table.append(tr);
+    tableBody.append(tr);
   });
 }
 
@@ -57,5 +65,6 @@ charts_style_options.addEventListener("click", (e) => {
 });
 
 reset_app.addEventListener("click", (e) => {
+  slider.value = 50;
   container.classList.remove("move", "movehigher");
 });

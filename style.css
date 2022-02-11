@@ -8,7 +8,7 @@
 
 body {
   font-family: "Atkinson Hyperlegible", sans-serif;
-  background-color: hsl(224, 34%, 80%);
+
   overscroll-behavior-y: none;
   overflow: hidden;
 }
@@ -46,7 +46,7 @@ textarea {
 
 #container > * {
   height: 100%;
-  border: 3px solid #fff;
+  background: linear-gradient(140deg, hsl(224, 34%, 80%), #94a3b8);
 }
 
 #ui_form {
@@ -104,8 +104,8 @@ textarea {
 #ui_show_charts {
   all: unset;
   cursor: pointer;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,7 +119,7 @@ textarea {
 button svg {
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.8;
   user-select: none;
 }
 
@@ -136,7 +136,7 @@ button svg {
 #ui_show_charts {
   margin: auto;
   border: 1px solid white;
-  padding: 1em;
+  padding: .5em;
 }
 
 /* ******* */
@@ -159,7 +159,7 @@ button svg {
 }
 
 #charts tbody {
-  width: 150vh;
+  min-width: 20vh;
   padding-top: 2em;
 }
 
@@ -178,11 +178,13 @@ tbody .data {
   color: hsl(224, 20%, 10%);
   top: -1.75em;
   left: 0;
-  margin-left: -100%;
+  margin-left: -50%;
   opacity: 0;
   transition: all 0.2s;
   background-color: white;
   padding: 0.25em 0.5em;
+  box-shadow: 2px 2px 2px #0005;
+  border-radius: 4px;
 }
 
 tbody tr:hover .data {
@@ -238,4 +240,5 @@ tbody tr:hover .data {
   height: 64px;
   border-radius: 100%;
   margin-bottom: 2em;
+  cursor: pointer;
 }
