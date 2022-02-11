@@ -28,6 +28,7 @@ function storeValue(val, date) {
   data.push({ value: val, date: date });
 
   localStorage.setItem("data", JSON.stringify(data));
+  sendDataToJsonBin(JSON.stringify(data));
   console.log(data);
 }
 
@@ -68,3 +69,19 @@ reset_app.addEventListener("click", (e) => {
   slider.value = 50;
   container.classList.remove("move", "movehigher");
 });
+
+// JSON BIN
+function sendDataToJsonBin(data) {
+  let req = new XMLHttpRequest();
+
+req.onreadystatechange = () => {
+  if (req.readyState == XMLHttpRequest.DONE) {
+    console.log(req.responseText);
+  }
+};
+
+req.open("PUT", "https://api.jsonbin.io/v3/b/620678ca4bf50f4b2df7b279", true);
+req.setRequestHeader("Content-Type", "application/json");
+req.setRequestHeader("X-Master-Key", "$2b$10$WAFNRNZjY0lcb5sEmtl5bunm4T4rmeCXxwAf5rwoMLvQFxwVjdKoi");
+req.send(data);
+}
