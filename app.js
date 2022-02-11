@@ -29,11 +29,12 @@ ui_form.addEventListener("submit", (e) => {
   displayChart(tableBody1);
   displayChart(tableBody2);
 
-  container.classList.add("move");
+  ui_form.classList.add("move");
+  ui_show_charts.classList.add("move");
 });
 
 ui_show_charts.addEventListener("click", (e) => {
-  container.classList.add("movehigher");
+  charts.classList.add("move");
 });
 
 function storeValue(val, date) {

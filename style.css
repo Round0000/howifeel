@@ -28,14 +28,8 @@ textarea {
 .move {
   transform: translateY(-100vh) !important;
 }
-.movehigher {
-  transform: translateY(-150vh) !important;
-}
 
 /*****************/
-#container {
-  transition: all .8s;
-}
 
 
 #ui_form {
@@ -46,6 +40,7 @@ textarea {
   grid-template-rows: 1fr auto;
   height: calc(85vh + 8vw);
   padding-bottom: 3vh;
+  transition: all .8s;
 }
 
 #slider {
@@ -172,4 +167,5 @@ textarea {
 #charts {
   padding-top: 10vh;
   height: 100vh;
+  transition: all .8s;
 }
