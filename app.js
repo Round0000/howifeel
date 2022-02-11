@@ -76,7 +76,10 @@ charts_style_options.addEventListener("click", (e) => {
 reset_app.addEventListener("click", (e) => {
   slider.value = 50;
   container.classList.remove("move", "movehigher");
-  window.close();
+
+  setTimeout(() => {
+    window.close();
+  }, 350);
 });
 
 // JSON BIN
