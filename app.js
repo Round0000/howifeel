@@ -1,4 +1,6 @@
-document.querySelector("body").style.height = window.innerHeight + "px";
+if (window.innerWidth < 800) {
+  document.querySelector("body").style.height = window.innerHeight + "px";
+}
 
 ui_form.addEventListener("submit", (e) => {
   e.preventDefault();
