@@ -46,8 +46,7 @@ textarea {
 
 #container > * {
   height: 100%;
-  outline: 10px solid #fff8;
-  outline-offset: -10px;
+  border: 3px solid #fff;
 }
 
 #ui_form {
@@ -151,12 +150,11 @@ textarea {
 }
 
 #charts table {
-  overflow-x: scroll;
+  overflow-x: auto;
   height: 30vh;
   border: 1px solid white;
   background-color: #fff6;
   margin: 2vh auto;
-  width: 90vw;
   grid-column: 2;
   grid-row: 1;
   transition: all .3s;
