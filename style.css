@@ -95,15 +95,19 @@ textarea {
 
 /* ******* */
 
-#chart {
-    width: 100vw;
+#chart,
+#chart2 {
+  width: 100vw;
+  overflow-x: auto;
 }
 
-#chart tbody {
-    overflow-x: auto;
+#chart tbody,
+#chart2 tbody {
+  min-width: 800px;
 }
 
-#chart.area {
+#chart,
+#chart2 {
   height: 30vw;
   width: 90vw;
   margin: 5vw auto;
@@ -111,24 +115,27 @@ textarea {
   background-color: #fff2;
 }
 
-#chart td::before {
-    background-color: hsl(224, 20%, 50%);
+#chart td::before,
+#chart2 td::before {
+  background-color: hsl(224, 20%, 50%);
 }
 
-#chart .data {
-    width: max-content;
-    font-size: 1rem;
-    position: fixed;
-    opacity: 0;
-    top: 6vw;
-    left: 0;
-    right: 0;
-    width: 100%;
-    color: hsl(224, 20%, 10%);
+#chart .data,
+#chart2 .data {
+  width: max-content;
+  font-size: 1rem;
+  position: fixed;
+  opacity: 0;
+  top: 6vw;
+  left: 0;
+  right: 0;
+  width: 100%;
+  color: hsl(224, 20%, 10%);
 }
 
-#chart tr:hover .data {
-    opacity: 1;
-    margin: auto;
-    z-index: 10;
+#chart tr:hover .data,
+#chart2 tr:hover .data {
+  opacity: 1;
+  margin: auto;
+  z-index: 10;
 }

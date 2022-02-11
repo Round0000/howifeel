@@ -156,9 +156,10 @@ const data = [
   },
 ];
 
-const tableBody = chart.querySelector("tbody");
+const tableBody1 = chart.querySelector("tbody");
+const tableBody2 = chart2.querySelector("tbody");
 
-function displayChart() {
+function displayChart(table) {
   let prevPoint = data[0].value / 100;
 
   data.forEach((item) => {
@@ -169,8 +170,9 @@ function displayChart() {
     }"> <span class="data"> ${item.date} </span> </td>
     `;
     prevPoint = item.value / 100;
-    tableBody.append(tr);
+    table.append(tr);
   });
 }
 
-displayChart();
+displayChart(tableBody1);
+displayChart(tableBody2);
