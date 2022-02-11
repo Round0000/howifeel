@@ -161,3 +161,15 @@ function displayChart(table) {
 }
 
 
+// Chart display style
+let currDisplayStyle = "Area";
+
+charts_style_options.addEventListener('click', e => {
+  if (e.target.innerText === "Area") {
+    chart_area.classList.remove('hidden');
+    chart_line.classList.add('hidden');
+  } else if (e.target.innerText === "Line") {
+    chart_line.classList.remove('hidden');
+    chart_area.classList.add('hidden');
+  }
+})

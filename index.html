@@ -87,13 +87,20 @@
 
       <!--  -->
       <div id="charts">
-        <table class="charts-css area" id="chart">
+        <table class="charts-css area" id="chart_area">
           <tbody></tbody>
         </table>
 
-        <table class="charts-css line" id="chart2">
+        <table class="charts-css line hidden" id="chart_line">
           <tbody></tbody>
         </table>
+
+        <div id="charts_style_options">
+          <input type="radio" name="charts_style" id="charts_style_area" checked />
+          <label for="charts_style_area">Area</label>
+          <input type="radio" name="charts_style" id="charts_style_line" />
+          <label for="charts_style_line">Line</label>
+        </div>
       </div>
     </div>
 
