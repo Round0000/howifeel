@@ -24,7 +24,7 @@ function storeValue(val, date) {
     date.getMonth() + 1 < 10
       ? "0" + (date.getMonth() + 1)
       : date.getMonth() + 1;
-  date = date.getDate() + "." + month + "." + date.getFullYear();
+  date = date.getDate() + "." + month + "." + (date.getYear() - 100);
   data.push({ value: val, date: date });
 
   localStorage.setItem("data", JSON.stringify(data));
