@@ -73,10 +73,11 @@ charts_style_options.addEventListener("click", (e) => {
   }
 });
 
-reset_app.addEventListener("click", (e) => {
+document.addEventListener("click", (e) => {
+if (e.target.classList.contains('reset_app') {
   slider.value = 50;
   container.classList.remove("move", "movehigher");
-
+} 
 });
 
 // JSON BIN
