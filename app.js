@@ -21,6 +21,10 @@
 //   list.append(item);
 // }
 
+ui_form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
 slider.addEventListener("change", (e) => {
   console.log(e.target.value);
 });
