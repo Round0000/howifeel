@@ -11,8 +11,8 @@ ui_form.addEventListener("submit", (e) => {
 });
 
 ui_show_charts.addEventListener("click", (e) => {
-  ui_show_charts.classList.add("move");
-  charts.classList.add("move");
+  ui_show_charts.classList.add("movehigher");
+  charts.classList.add("movehigher");
 });
 
 function storeValue(val, date) {
