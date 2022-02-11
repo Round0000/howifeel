@@ -10,12 +10,23 @@
       href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Dancing+Script:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
+    <table class="charts-css area" id="chart">
+      <tbody></tbody>
+    </table>
+
+    <!--  -->
+
     <form id="ui_form">
-      <input type="range" name="" id="slider" />
+      <input type="range" name="evaluation" id="slider" />
       <button type="submit">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -46,77 +57,6 @@
         </svg>
       </button>
     </form>
-
-    <!-- <div id="slider_bar">
-        <div id="slider"></div>
-    </div> -->
-
-    <!-- <div class="oldprototype">
-        <h1>Evaluate how are you <span>feeling today</span></h1>
-    <form id="ui_form">
-      <div id="ui_form_evaluations">
-        <input type="radio" name="evaluation" id="value_0" value="0" /><label
-          for="value_0"
-          >0</label
-        >
-        <input type="radio" name="evaluation" id="value_1" value="1" /><label
-          for="value_1"
-          >1</label
-        >
-        <input type="radio" name="evaluation" id="value_2" value="2" /><label
-          for="value_2"
-          >2</label
-        >
-        <input type="radio" name="evaluation" id="value_3" value="3" /><label
-          for="value_3"
-          >3</label
-        >
-        <input type="radio" name="evaluation" id="value_4" value="4" /><label
-          for="value_4"
-          >4</label
-        >
-        <input type="radio" name="evaluation" id="value_5" value="5" /><label
-          for="value_5"
-          >5</label
-        >
-        <input type="radio" name="evaluation" id="value_6" value="6" /><label
-          for="value_6"
-          >6</label
-        >
-      </div>
-
-      <label id="ui_comment_input">
-        <textarea
-          name="comment"
-          placeholder="You can enter a comment here"
-        ></textarea>
-      </label>
-
-      <button id="ui_submit_btn" type="submit">Submit</button>
-    </form>
-
-    <div id="ui_stats">
-        <ul>
-            <li data-evaluation="1">01</li>
-            <li data-evaluation="4">02</li>
-            <li data-evaluation="6">03</li>
-            <li data-evaluation="1">04</li>
-            <li data-evaluation="4">05</li>
-            <li data-evaluation="5">06</li>
-            <li data-evaluation="0">07</li>
-            <li data-evaluation="1">08</li>
-            <li data-evaluation="6">09</li>
-            <li data-evaluation="5">10</li>
-            <li data-evaluation="5">11</li>
-            <li data-evaluation="2">12</li>
-            <li data-evaluation="3">13</li>
-            <li data-evaluation="2">14</li>
-            <li data-evaluation="0">15</li>
-            <li data-evaluation="1">16</li>
-            <li data-evaluation="4">17</li>
-        </ul>
-    </div>
-    </div> -->
 
     <script src="app.js"></script>
   </body>
