@@ -105,15 +105,15 @@ textarea {
 }
 
 #chart.area {
-  height: 20vw;
-  width: 80vw;
-  margin: 2em auto;
+  height: 30vw;
+  width: 90vw;
+  margin: 5vw auto;
   border: 1px solid white;
   background-color: #fff2;
 }
 
 #chart td::before {
-    background-color: #0009;
+    background-color: hsl(224, 20%, 50%);
 }
 
 #chart .data {
@@ -127,7 +127,6 @@ textarea {
 #chart tr:hover .data {
     opacity: 1;
     margin: auto;
-    outline: 1px solid orange;
     z-index: 10;
     inset: 0;
 }
