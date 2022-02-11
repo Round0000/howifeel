@@ -58,5 +58,4 @@ charts_style_options.addEventListener("click", (e) => {
 
 reset_app.addEventListener("click", (e) => {
   container.classList.remove("move", "movehigher");
-  window.location.reload();
 });
