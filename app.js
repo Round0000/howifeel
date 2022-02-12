@@ -29,7 +29,19 @@ function storeValue(val, date) {
       ? "0" + (date.getMonth() + 1)
       : date.getMonth() + 1;
   date = date.getDate() + "." + month + "." + (date.getYear() - 100);
-  data.push({ value: val, date: date });
+
+  const result = data.find((el) => el.date === date);
+
+
+  if (result) {
+    result.value = val;
+  } else {
+    data.push({ value: val, date: date });
+  }
+
+
+  //
+  //
 
   localStorage.setItem("data", JSON.stringify(data));
 
@@ -41,7 +53,6 @@ function storeValue(val, date) {
 }
 
 function displayChart(tableBody) {
-  console.log(tableBody);
   tableBody.innerHTML = "";
 
   let prevPoint = data[0].value / 100;
@@ -74,10 +85,11 @@ charts_style_options.addEventListener("click", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-if (e.target.classList.contains('reset_app') {
-  slider.value = 50;
-  container.classList.remove("move", "movehigher");
-} 
+  console.log(e.target);
+  if (e.target.classList.contains("reset_app")) {
+    slider.value = 50;
+    container.classList.remove("move", "movehigher");
+  }
 });
 
 // JSON BIN
