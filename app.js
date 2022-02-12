@@ -32,13 +32,11 @@ function storeValue(val, date) {
 
   const result = data.find((el) => el.date === date);
 
-
   if (result) {
     result.value = val;
   } else {
     data.push({ value: val, date: date });
   }
-
 
   //
   //
@@ -89,6 +87,7 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("reset_app")) {
     slider.value = 50;
     container.classList.remove("move", "movehigher");
+    slider.focus();
   }
 });
 
