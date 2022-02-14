@@ -91,6 +91,8 @@ document.addEventListener("click", (e) => {
   }
 });
 
+
+
 // JSON BIN
 function sendDataToJsonBin(data) {
   let req = new XMLHttpRequest();
